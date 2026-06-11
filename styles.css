@@ -1,0 +1,120 @@
+/* World Cup Story — marketing & legal site */
+:root {
+  --bg: #06170c;
+  --bg2: #0a2414;
+  --panel: #0e2a17;
+  --gold: #f5c542;
+  --gold-soft: #ffe89a;
+  --green: #2aa14a;
+  --text: #eaf3e6;
+  --muted: #9fb6a2;
+  --line: rgba(245, 197, 66, 0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { color: var(--gold-soft); }
+
+.container { width: 100%; max-width: 920px; margin: 0 auto; padding: 0 22px; }
+
+/* ---- nav ---- */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(6, 23, 12, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .container { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 900; letter-spacing: 0.5px; color: var(--gold); }
+.brand .crown { font-size: 18px; }
+.nav-links { display: flex; gap: 22px; font-size: 14px; font-weight: 600; }
+.nav-links a { color: var(--muted); }
+.nav-links a:hover { color: var(--text); }
+
+/* ---- hero ---- */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 90px 0 70px;
+  background:
+    radial-gradient(70% 60% at 50% 30%, rgba(42, 161, 74, 0.28), transparent 70%),
+    linear-gradient(180deg, #082010, #06170c);
+  border-bottom: 1px solid var(--line);
+}
+.hero .crown { color: var(--gold); font-size: 30px; }
+.hero h1 {
+  font-size: clamp(40px, 8vw, 72px);
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--gold);
+  line-height: 1.05;
+  margin: 6px 0 0;
+  text-shadow: 0 4px 24px rgba(245, 197, 66, 0.25);
+}
+.hero .tagline { margin-top: 14px; color: var(--gold-soft); font-weight: 800; letter-spacing: 3px; font-size: 13px; }
+.hero p.lead { margin: 22px auto 0; max-width: 560px; color: var(--muted); font-size: 17px; }
+
+.badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  padding: 11px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.badge.soon { color: #14233f; background: var(--gold); border-color: var(--gold); }
+
+/* ---- sections ---- */
+section.block { padding: 64px 0; }
+section.block.alt { background: var(--bg2); }
+h2 { font-size: 28px; font-weight: 900; color: var(--text); margin-bottom: 6px; text-align: center; }
+.sub { text-align: center; color: var(--muted); margin-bottom: 36px; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+}
+.card .ic { font-size: 26px; }
+.card h3 { font-size: 17px; margin: 10px 0 6px; color: var(--gold-soft); }
+.card p { color: var(--muted); font-size: 14.5px; }
+
+.privacy-strip { text-align: center; }
+.privacy-strip .pill { display: inline-block; margin: 6px; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); font-weight: 600; font-size: 14px; }
+
+/* ---- legal pages ---- */
+.legal { padding: 56px 0 80px; }
+.legal h1 { font-size: 34px; font-weight: 900; color: var(--gold); margin-bottom: 6px; }
+.legal .updated { color: var(--muted); font-size: 14px; margin-bottom: 30px; }
+.legal h2 { text-align: left; font-size: 20px; margin: 30px 0 8px; color: var(--gold-soft); }
+.legal p, .legal li { color: #d6e4d2; font-size: 16px; }
+.legal ul { margin: 8px 0 8px 22px; }
+.legal li { margin: 4px 0; }
+.legal .back { display: inline-block; margin-bottom: 26px; font-weight: 700; }
+
+/* ---- footer ---- */
+footer { border-top: 1px solid var(--line); padding: 34px 0; background: #050f08; }
+footer .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+footer .f-links { display: flex; gap: 20px; font-size: 14px; }
+footer small { color: var(--muted); font-size: 13px; }
+.disclaimer { color: #6f8a72; font-size: 12.5px; max-width: 720px; margin: 14px auto 0; text-align: center; }
+
+@media (max-width: 720px) {
+  .grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 16px; }
+}
