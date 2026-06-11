@@ -33,6 +33,6 @@ CNAME           Custom domain for GitHub Pages
 4. After DNS propagates, the site is live at `https://world-cup-storygame.com`.
 
 ## Notes
-- Update the contact email (currently `ertugrul_kurtul@hotmail.com`) if you prefer
+- Update the contact email (currently `worldcupstorygame@gmail.com`) if you prefer
   a different address — change it in all three HTML files.
 - The Terms page includes a non-affiliation disclaimer; keep it for store review.
