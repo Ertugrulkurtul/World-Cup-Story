@@ -1,6 +1,6 @@
-# World Cup Story — Website
+# Legends Cup — Website
 
-Static marketing + legal site for the **World Cup Story** game.
+Static marketing + legal site for the **Legends Cup** game.
 Plain HTML/CSS — no build step. Open `index.html` to preview locally.
 
 ```
