@@ -17,7 +17,11 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--bg);
+  background:
+    radial-gradient(70% 48% at 50% -5%, rgba(245, 197, 66, 0.10), transparent 60%),
+    radial-gradient(90% 55% at 50% 116%, rgba(42, 161, 74, 0.12), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -45,12 +49,25 @@ a:hover { color: var(--gold-soft); }
 /* ---- hero ---- */
 .hero {
   position: relative;
+  overflow: hidden;
   text-align: center;
-  padding: 90px 0 70px;
+  padding: 64px 0 78px;
   background:
-    radial-gradient(70% 60% at 50% 30%, rgba(42, 161, 74, 0.28), transparent 70%),
-    linear-gradient(180deg, #082010, #06170c);
+    radial-gradient(62% 70% at 50% 16%, rgba(42, 161, 74, 0.30), transparent 70%),
+    linear-gradient(180deg, #0a2613, #06170c);
   border-bottom: 1px solid var(--line);
+}
+.hero .container { position: relative; z-index: 1; }
+.hero-glow {
+  position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
+  width: 640px; height: 640px; max-width: 130vw; pointer-events: none;
+  background: radial-gradient(circle, rgba(245, 197, 66, 0.32), rgba(245, 197, 66, 0.06) 42%, transparent 66%);
+}
+.hero-trophy {
+  display: block; margin: 0 auto 4px;
+  width: 190px; height: auto;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 14px 34px rgba(245, 197, 66, 0.35));
 }
 .hero .crown { color: var(--gold); font-size: 30px; }
 .hero h1 {
@@ -97,26 +114,28 @@ h2 { font-size: 28px; font-weight: 900; color: var(--text); margin-bottom: 6px; 
 /* ---- screenshots gallery ---- */
 .shots {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   overflow-x: auto;
-  max-width: 920px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 8px 22px 12px;
+  padding: 14px 22px 14px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 .shots::-webkit-scrollbar { height: 8px; }
 .shots::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
-.shot {
+.phone {
   flex: 0 0 auto;
-  width: 230px;
-  height: auto;
-  border-radius: 22px;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+  width: 232px;
+  padding: 9px;
+  border-radius: 40px;
+  background: linear-gradient(155deg, #2a2c33, #0c0d10);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.55), inset 0 0 0 1.5px rgba(255, 255, 255, 0.04);
   scroll-snap-align: center;
-  background: #000;
 }
+.phone img { display: block; width: 100%; height: auto; border-radius: 32px; background: #000; }
+.swipe-hint { text-align: center; color: var(--muted); font-size: 12px; letter-spacing: 3px; margin-top: 10px; text-transform: uppercase; }
 
 .privacy-strip { text-align: center; }
 .privacy-strip .pill { display: inline-block; margin: 6px; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); font-weight: 600; font-size: 14px; }
