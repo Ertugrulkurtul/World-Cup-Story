@@ -63,11 +63,10 @@ a:hover { color: var(--gold-soft); }
   width: 640px; height: 640px; max-width: 130vw; pointer-events: none;
   background: radial-gradient(circle, rgba(245, 197, 66, 0.32), rgba(245, 197, 66, 0.06) 42%, transparent 66%);
 }
-.hero-trophy {
-  display: block; margin: 0 auto 4px;
-  width: 190px; height: auto;
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 14px 34px rgba(245, 197, 66, 0.35));
+.hero-icon {
+  display: block; margin: 0 auto 16px;
+  width: 138px; height: 138px;
+  filter: drop-shadow(0 16px 38px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 50px rgba(245, 197, 66, 0.22));
 }
 .hero .crown { color: var(--gold); font-size: 30px; }
 .hero h1 {
