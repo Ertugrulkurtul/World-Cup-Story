@@ -92,6 +92,19 @@ a:hover { color: var(--gold-soft); }
   font-size: 14px;
 }
 .badge.soon { color: #14233f; background: var(--gold); border-color: var(--gold); }
+.play-cta {
+  display: inline-block;
+  margin-top: 24px;
+  background: var(--gold);
+  color: #14233f;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  padding: 15px 30px;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(245, 197, 66, 0.35);
+}
+.play-cta:hover { color: #14233f; background: var(--gold-soft); }
 
 /* ---- sections ---- */
 section.block { padding: 64px 0; }
